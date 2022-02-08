@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Licorice&display=swap" rel="stylesheet">
+    <title>Shopping items</title>
+
+
+    <style>
+        body {
+            background-color: rgb(201, 202, 202);
+            margin: 0 auto;
+           
+            text-align: center;
+        }
+        h1{
+            padding-top: 50px;
+        }
+        input[type=text] {
+            
+            font-size: 1em;
+            padding: 20px 0px 20px 10px ;
+        }
+
+
+        .btn {
+            font-size: 16px;
+            background-color: rgb(119, 104, 104);
+            padding: 10px 12px;
+            color: white;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <h1>Check what Customer was able to buy</h1>
+    <div>
+        <input type="text" placeholder="type the amount here" id="input">
+        <input type="submit" class="btn" value="Submit" onclick="submit()">
+        <input type="button" class="btn" value="Clear" onclick="clr()">
+    </div>
+</body>
+
+
+<script>
+
+    function submit() {
+        let amt = document.getElementById("input").value;
+        let a;
+        if (amt >= 35) {
+            a = amt - 35;
+            alert("Customer purchased Grocery and Ice cream and the amount left with him now is " + a);
+        }
+        else if (amt === 20) {
+            alert("Customer was only able to purchase Grocery with the given amount")
+        }
+        else if (amt === "") {
+            alert("Enter the amount first!");
+        }
+        else {
+            alert("Customer wasn't able to purchase anything due to insuffient amount");
+        }
+    }
+
+function clr(){
+    return document.getElementById("input").value=" ";
+}
+
+</script>
+
+</html>
